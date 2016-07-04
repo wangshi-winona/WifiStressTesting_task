@@ -1,0 +1,10 @@
+http://www.google.com.hk
+http://z-ecx.images-amazon.com/images/G/01/AUIClients/AmazonUI-f28e5b0187075e51333d2b1d2c00acf2318fc9f3._V2_.css#AUIClients/AmazonUI.rendering_engine-not-trident.min/
+http://g-ecx.images-amazon.com/images/G/01/gateway/yiyiz/Grocery._CB299522610_.png/
+http://abs.twimg.com/c/swift/en/bundle/boot.60ae27965b7a97fd9f5239dce68cbb7e30e1159f.js/
+http://pbs.twimg.com/profile_images/722779070262591489/TPsTrO7f_bigger.jpg/
+http://static-hp-wus-s-msn-com.akamaized.net/sc/82/c22c7d.gif/
+http://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBt46pp.img?h=194&w=300&m=6&q=60&u=t&o=t&l=f/
+http://s.yjtag.jp/tag.js#site=2wzBV9u/
+http://yads.c.yimg.jp/js/yads-async.js/
+http://platform.linkedin.com/js/analytics.js/
