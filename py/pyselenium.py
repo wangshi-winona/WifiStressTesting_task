@@ -4,6 +4,7 @@ from pyvirtualdisplay import Display
 import time
 import sys
 import json
+import os
 from getId import getId
 from datetime import datetime
 from upload import http_post
@@ -14,9 +15,10 @@ serverIp= sys.argv[1]
 video=sys.argv[2]
 eid=sys.argv[3]
 location=sys.argv[4]
+curPath=os.getcwd()
 url="http://"+serverIp+"/video.html?video="+video
-json_file="/home/pi/task/log/video/"+str(int(time.time()))+".json"
-log_file="/home/pi/task/log/video/video_log"
+json_file=curPath+"/../log/video/"+str(int(time.time()))+".json"
+log_file=curPath+"/../log/video/video_log"
 with open (log_file,'a') as logfile:
 	logfile.write("server: "+serverIp)
 	logfile.write("video: "+video)

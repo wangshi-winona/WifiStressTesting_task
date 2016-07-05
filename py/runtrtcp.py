@@ -3,8 +3,10 @@ import sys
 import csv
 import json
 import time
+import os
 from getId import getId
 from upload import http_post
+curPath = os.getcwd()
 def bash_command(cmd):
 	proc=subprocess.Popen(['/bin/bash','-c',cmd],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 	return proc
@@ -19,11 +21,11 @@ def remove_last_line(s):
 #location=sys.argv[5]
 
 def runtrtcp(N,r,obj,eid,location):
-	log_file="/home/pi/task/log/trtcp/trtcp_log"
+	log_file=curPath+"/../log/trtcp/trtcp_log"
 	id=getId()
 	timeStamp=str(int(time.time()))
 	dataobj={'piid':id,'eid':eid,'location':location,'type':'trtcp','timeStamp':timeStamp,'proberPerSec':N,'probeRate':r,'object':obj,'data':[]}
-	json_file='/home/pi/task/log/trtcp/'+timeStamp+'.json'
+	json_file=curPath+'/../log/trtcp/'+timeStamp+'.json'
 	cmd=bash_command('trtcp -l 0 -R -z 65535 -i wlan0 -S -N '+N+' -r '+r+' -O -C '+obj)
 	out, err=cmd.communicate()
 	print getId()+": trtcp object \""+obj+"\""
