@@ -1,4 +1,5 @@
 #! /bin/bash
 task=$1
-line=$(head -n 1 ${PWD}'/../id.txt')
+curPath=$(cd "$(dirname "$0")";pwd)
+line=$(head -n 1 ${curPath}'/../id.txt')
 echo ${line}": "${task}

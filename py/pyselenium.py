@@ -5,6 +5,7 @@ import time
 import sys
 import json
 import os
+import inspect
 from getId import getId
 from datetime import datetime
 from upload import http_post
@@ -15,7 +16,7 @@ serverIp= sys.argv[1]
 video=sys.argv[2]
 eid=sys.argv[3]
 location=sys.argv[4]
-curPath=os.getcwd()
+curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 url="http://"+serverIp+"/video.html?video="+video
 json_file=curPath+"/../log/video/"+str(int(time.time()))+".json"
 log_file=curPath+"/../log/video/video_log"

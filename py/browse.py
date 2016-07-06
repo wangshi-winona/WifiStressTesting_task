@@ -7,6 +7,7 @@ import sys
 import linecache
 import io
 import os
+import inspect
 from random import randint
 from getId import getId
 from upload import http_post
@@ -14,7 +15,7 @@ interval=sys.argv[1]
 repeat=sys.argv[2]
 eid=sys.argv[3]
 location=sys.argv[4]
-curPath=os.getcwd()
+curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 link_file=curPath+"/links.txt"
 json_file=curPath+"/../log/web/"+str(int(time.time()))+'.json'
 log_file=curPath+"/../log/web/web_log"

@@ -1,0 +1,341 @@
+{
+    "piid": "2", 
+    "timeStamp": "1467779627", 
+    "startDelay": "1429", 
+    "eid": "1", 
+    "type": "video", 
+    "duration": "106", 
+    "data": [
+        {
+            "current": "8", 
+            "timeStamp": "1467779638", 
+            "bufferEnd": "43", 
+            "buffer": "35"
+        }, 
+        {
+            "current": "11", 
+            "timeStamp": "1467779641", 
+            "bufferEnd": "77", 
+            "buffer": "66"
+        }, 
+        {
+            "current": "15", 
+            "timeStamp": "1467779644", 
+            "bufferEnd": "106", 
+            "buffer": "92"
+        }, 
+        {
+            "current": "17", 
+            "timeStamp": "1467779646", 
+            "bufferEnd": "106", 
+            "buffer": "90"
+        }, 
+        {
+            "current": "19", 
+            "timeStamp": "1467779648", 
+            "bufferEnd": "106", 
+            "buffer": "88"
+        }, 
+        {
+            "current": "20", 
+            "timeStamp": "1467779649", 
+            "bufferEnd": "106", 
+            "buffer": "87"
+        }, 
+        {
+            "current": "22", 
+            "timeStamp": "1467779651", 
+            "bufferEnd": "106", 
+            "buffer": "85"
+        }, 
+        {
+            "current": "23", 
+            "timeStamp": "1467779652", 
+            "bufferEnd": "106", 
+            "buffer": "84"
+        }, 
+        {
+            "current": "25", 
+            "timeStamp": "1467779654", 
+            "bufferEnd": "106", 
+            "buffer": "82"
+        }, 
+        {
+            "current": "26", 
+            "timeStamp": "1467779655", 
+            "bufferEnd": "106", 
+            "buffer": "81"
+        }, 
+        {
+            "current": "29", 
+            "timeStamp": "1467779658", 
+            "bufferEnd": "106", 
+            "buffer": "78"
+        }, 
+        {
+            "current": "31", 
+            "timeStamp": "1467779660", 
+            "bufferEnd": "106", 
+            "buffer": "76"
+        }, 
+        {
+            "current": "33", 
+            "timeStamp": "1467779662", 
+            "bufferEnd": "106", 
+            "buffer": "74"
+        }, 
+        {
+            "current": "34", 
+            "timeStamp": "1467779663", 
+            "bufferEnd": "106", 
+            "buffer": "73"
+        }, 
+        {
+            "current": "36", 
+            "timeStamp": "1467779665", 
+            "bufferEnd": "106", 
+            "buffer": "71"
+        }, 
+        {
+            "current": "38", 
+            "timeStamp": "1467779667", 
+            "bufferEnd": "106", 
+            "buffer": "69"
+        }, 
+        {
+            "current": "40", 
+            "timeStamp": "1467779669", 
+            "bufferEnd": "106", 
+            "buffer": "67"
+        }, 
+        {
+            "current": "41", 
+            "timeStamp": "1467779670", 
+            "bufferEnd": "106", 
+            "buffer": "66"
+        }, 
+        {
+            "current": "43", 
+            "timeStamp": "1467779672", 
+            "bufferEnd": "106", 
+            "buffer": "64"
+        }, 
+        {
+            "current": "45", 
+            "timeStamp": "1467779674", 
+            "bufferEnd": "106", 
+            "buffer": "62"
+        }, 
+        {
+            "current": "46", 
+            "timeStamp": "1467779676", 
+            "bufferEnd": "106", 
+            "buffer": "61"
+        }, 
+        {
+            "current": "48", 
+            "timeStamp": "1467779678", 
+            "bufferEnd": "106", 
+            "buffer": "59"
+        }, 
+        {
+            "current": "50", 
+            "timeStamp": "1467779680", 
+            "bufferEnd": "106", 
+            "buffer": "57"
+        }, 
+        {
+            "current": "52", 
+            "timeStamp": "1467779681", 
+            "bufferEnd": "106", 
+            "buffer": "55"
+        }, 
+        {
+            "current": "54", 
+            "timeStamp": "1467779683", 
+            "bufferEnd": "106", 
+            "buffer": "53"
+        }, 
+        {
+            "current": "56", 
+            "timeStamp": "1467779686", 
+            "bufferEnd": "106", 
+            "buffer": "51"
+        }, 
+        {
+            "current": "58", 
+            "timeStamp": "1467779687", 
+            "bufferEnd": "106", 
+            "buffer": "49"
+        }, 
+        {
+            "current": "60", 
+            "timeStamp": "1467779690", 
+            "bufferEnd": "106", 
+            "buffer": "47"
+        }, 
+        {
+            "current": "62", 
+            "timeStamp": "1467779691", 
+            "bufferEnd": "106", 
+            "buffer": "45"
+        }, 
+        {
+            "current": "63", 
+            "timeStamp": "1467779692", 
+            "bufferEnd": "106", 
+            "buffer": "44"
+        }, 
+        {
+            "current": "65", 
+            "timeStamp": "1467779693", 
+            "bufferEnd": "106", 
+            "buffer": "42"
+        }, 
+        {
+            "current": "66", 
+            "timeStamp": "1467779695", 
+            "bufferEnd": "106", 
+            "buffer": "41"
+        }, 
+        {
+            "current": "69", 
+            "timeStamp": "1467779698", 
+            "bufferEnd": "106", 
+            "buffer": "38"
+        }, 
+        {
+            "current": "71", 
+            "timeStamp": "1467779700", 
+            "bufferEnd": "106", 
+            "buffer": "36"
+        }, 
+        {
+            "current": "72", 
+            "timeStamp": "1467779702", 
+            "bufferEnd": "106", 
+            "buffer": "35"
+        }, 
+        {
+            "current": "74", 
+            "timeStamp": "1467779703", 
+            "bufferEnd": "106", 
+            "buffer": "33"
+        }, 
+        {
+            "current": "76", 
+            "timeStamp": "1467779705", 
+            "bufferEnd": "106", 
+            "buffer": "31"
+        }, 
+        {
+            "current": "78", 
+            "timeStamp": "1467779707", 
+            "bufferEnd": "106", 
+            "buffer": "29"
+        }, 
+        {
+            "current": "79", 
+            "timeStamp": "1467779709", 
+            "bufferEnd": "106", 
+            "buffer": "28"
+        }, 
+        {
+            "current": "82", 
+            "timeStamp": "1467779711", 
+            "bufferEnd": "106", 
+            "buffer": "25"
+        }, 
+        {
+            "current": "84", 
+            "timeStamp": "1467779713", 
+            "bufferEnd": "106", 
+            "buffer": "23"
+        }, 
+        {
+            "current": "85", 
+            "timeStamp": "1467779714", 
+            "bufferEnd": "106", 
+            "buffer": "22"
+        }, 
+        {
+            "current": "87", 
+            "timeStamp": "1467779716", 
+            "bufferEnd": "106", 
+            "buffer": "20"
+        }, 
+        {
+            "current": "89", 
+            "timeStamp": "1467779718", 
+            "bufferEnd": "106", 
+            "buffer": "18"
+        }, 
+        {
+            "current": "90", 
+            "timeStamp": "1467779720", 
+            "bufferEnd": "106", 
+            "buffer": "17"
+        }, 
+        {
+            "current": "92", 
+            "timeStamp": "1467779722", 
+            "bufferEnd": "106", 
+            "buffer": "15"
+        }, 
+        {
+            "current": "94", 
+            "timeStamp": "1467779724", 
+            "bufferEnd": "106", 
+            "buffer": "13"
+        }, 
+        {
+            "current": "96", 
+            "timeStamp": "1467779725", 
+            "bufferEnd": "106", 
+            "buffer": "11"
+        }, 
+        {
+            "current": "98", 
+            "timeStamp": "1467779727", 
+            "bufferEnd": "106", 
+            "buffer": "9"
+        }, 
+        {
+            "current": "99", 
+            "timeStamp": "1467779728", 
+            "bufferEnd": "106", 
+            "buffer": "8"
+        }, 
+        {
+            "current": "101", 
+            "timeStamp": "1467779730", 
+            "bufferEnd": "106", 
+            "buffer": "6"
+        }, 
+        {
+            "current": "102", 
+            "timeStamp": "1467779731", 
+            "bufferEnd": "106", 
+            "buffer": "5"
+        }, 
+        {
+            "current": "104", 
+            "timeStamp": "1467779733", 
+            "bufferEnd": "106", 
+            "buffer": "3"
+        }, 
+        {
+            "current": "105", 
+            "timeStamp": "1467779734", 
+            "bufferEnd": "106", 
+            "buffer": "2"
+        }, 
+        {
+            "current": "106", 
+            "timeStamp": "1467779736", 
+            "bufferEnd": "106", 
+            "buffer": "1"
+        }
+    ], 
+    "location": "qr503"
+}

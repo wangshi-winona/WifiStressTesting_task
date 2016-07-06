@@ -1,9 +1,9 @@
-console.log("got there");
+//console.log("got there");
 var page = require('webpage').create();
 var system = require('system');
 var fs = require('fs');
 var curPath=fs.workingDirectory;
-var link_file = curPath+'/../py/links.txt';
+//var link_file = curPath+'/../py/links.txt';
 page.onConsoleMessage = function(msg) {
   console.log(msg);
 };
@@ -20,11 +20,11 @@ if (system.args.length === 1) {
       page.evaluate(function(keyword){
         document.querySelector("input[name='q']").value = keyword;
         document.querySelector("form[name='f']").submit();
-        console.log("searching '" + keyword +"'");
+        //console.log("searching '" + keyword +"'");
       },keyword);
       window.setTimeout(function(){
 
-        console.log("links");
+        //console.log("links");
         var result = page.evaluate(function(){
           var aElements =  document.querySelectorAll('.r a');
           var str = "";
@@ -35,7 +35,7 @@ if (system.args.length === 1) {
         });
 	//page.render('1.png');
         console.log(result);
-        fs.write(link_file,result,'a');
+        //fs.write(link_file,result,'a');
         phantom.exit();
       },4000);
 
