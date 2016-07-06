@@ -29,15 +29,20 @@ with open(link_file,'r') as f:
 	link_num= sum(1 for _ in f)
 resultStr=''
 for i in range(0,int(repeat)):
-	rand_link=linecache.getline(link_file,randint(1,link_num))
-	cmd=bash_command('phantomjs '+curPath+'/../js/loadtime.js '+rand_link)
-	out, err = cmd.communicate()
-	print getId()+": browse "+str(i+1)
-	with open(log_file,'a') as logfile:
-		logfile.write(out)
-	resultArr=out.strip().split(',')
-	dataobj['data'].append({'timeStamp':str(resultArr[0]),'link':resultArr[1],'loadtime':resultArr[2]})
-	time.sleep(float(interval))
+	try:
+		nthLine=randint(1,link_num)
+		rand_link=linecache.getline(link_file,nthLine)
+		#print nthLine
+		cmd=bash_command('phantomjs '+curPath+'/../js/loadtime.js '+rand_link)
+		out, err = cmd.communicate()
+		print getId()+": browse "+str(i+1)
+		with open(log_file,'a') as logfile:
+			logfile.write(out)
+		resultArr=out.strip().split(',')
+		dataobj['data'].append({'timeStamp':str(resultArr[0]),'link':resultArr[1],'loadtime':resultArr[2]})
+		time.sleep(float(interval))
+	except:
+		continue
 with open(json_file,'wb') as outfile:
 	json.dump(dataobj,outfile,indent=4) 
 resp=http_post(json_file,'web')
