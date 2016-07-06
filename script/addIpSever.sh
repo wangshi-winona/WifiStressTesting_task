@@ -1,4 +1,3 @@
 #! /bin/bash
-server=$1
-port=$2
-ssh-keyscan -p $port $server >> ~/.ssh/known_hosts
+source ${PWD}/../connection.conf
+ssh-keyscan -p ${serverSshPort} ${serverIp} >> ~/.ssh/known_hosts
