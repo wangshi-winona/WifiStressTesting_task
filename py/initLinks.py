@@ -12,6 +12,6 @@ with open(link_file,'wb') as f:
 	f.truncate()
 	print getId()+': Truncated links.txt'
 add_links('wifi')
-add_links('raspberry pi')
-add_links('stress testing')
-add_links('fedora')
+#add_links('raspberry pi')
+#add_links('stress testing')
+#add_links('fedora')
