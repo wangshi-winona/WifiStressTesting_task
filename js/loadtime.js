@@ -2,7 +2,6 @@ var page=require('webpage').create();
 var system=require('system');
 var fs = require('fs');
 var addr, t;
-//var log_file = "";
 
 page.settings.resourceTimeout = 5000;
 page.onResourceTimeout = function(e){
@@ -14,12 +13,11 @@ page.onResourceTimeout = function(e){
   }
 
 if ( system.args.length === 1){
-  console.log("Usage: loadtime.js <URL> <log file>");
+  console.log("Usage: loadtime.js <URL>");
   phantom.exit();
 }else{
   addr = system.args[1];
   t = Date.now();
-  //log_file = "/home/pi/task/log/browseweb/"+ system.args[2];
   page.open(addr, function(status) {
     if (status !== 'success') {
       //console.log('FAIL to load the address');

@@ -2,7 +2,8 @@ console.log("got there");
 var page = require('webpage').create();
 var system = require('system');
 var fs = require('fs');
-var link_file = '/home/pi/task/py/links.txt'
+var curPath=fs.workingDirectory;
+var link_file = curPath+'/../py/links.txt';
 page.onConsoleMessage = function(msg) {
   console.log(msg);
 };
