@@ -9,7 +9,7 @@ curPath = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()
 def bash_command(cmd):
 	proc=subprocess.Popen(['/bin/bash','-c',cmd],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 	return proc
-cmd=curPath+'/../script/sendip.sh '+getId()+' '+get_ip_address('wlan0')
+cmd=curPath+'/../script/sendip.sh '+getId()+' '+get_ip_address('eth0')
 proc=bash_command(cmd)
 out, err=proc.communicate()
 print out

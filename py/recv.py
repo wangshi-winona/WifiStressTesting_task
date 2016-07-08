@@ -10,7 +10,7 @@ def get_ip_address(ifname):
 		struct.pack('256s',ifname[:15])
 	)[20:24])
 
-UDP_IP = get_ip_address("wlan0")
+UDP_IP = get_ip_address("eth0")
 UDP_PORT = 7070
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

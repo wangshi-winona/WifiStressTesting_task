@@ -13,20 +13,20 @@ def get_ip_address(ifname):
 	)[20:24])
 
 UDP_IP = ''
-UDP_PORT = 10100
+UDP_PORT =7070 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST,1)
 sock.bind((UDP_IP, UDP_PORT))
 while True:
-	data, addr = sock.recvfrom(10104)
+	data, addr = sock.recvfrom(1024)
 	print data		
 	if data == "pi":
 		try:
-			myip = get_ip_address("wlan0")
+			myip = get_ip_address("eth0")
 		except:
-			myip = "no wifi connection"
+			myip = "no LAN connection"
 		finally:
 			MESSAGE = getId() + " " +  myip
 		print str(addr)

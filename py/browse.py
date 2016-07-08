@@ -20,9 +20,8 @@ link_file=curPath+"/links.txt"
 json_file=curPath+"/../log/web/"+str(int(time.time()))+'.json'
 log_file=curPath+"/../log/web/web_log"
 def bash_command(cmd):
-	proc=subprocess.Popen(['/bin/bash','-c', cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-	return proc
-
+        proc=subprocess.Popen(['/bin/bash','-c', cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        return proc
 dataobj={'type':'web','piid':getId(),'eid':eid,'location':location,'timeStamp':str(int(time.time())),'interval':interval,'repeat':repeat,'data':[]}
 
 with open(link_file,'r') as f:
