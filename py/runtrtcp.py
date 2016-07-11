@@ -30,7 +30,7 @@ def runtrtcp(N,r,obj,eid,location):
 	cmd=bash_command('trtcp -l 0 -R -z 65535 -i wlan0 -S -N '+N+' -r '+r+' -O -C '+obj)
 	out, err=cmd.communicate()
 	print getId()+": trtcp object \""+obj+"\""
-	with open(log_file,'a') as logfile:
+	with open(log_file,'ab') as logfile:
 		logfile.write(out)
 	resultStr=remove_last_line(out.strip())
 	#print resultStr

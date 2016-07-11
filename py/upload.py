@@ -11,6 +11,8 @@ def http_post(filePath,type):
 			url='http://158.132.255.20:12480/data/video'
 		elif type =='trtcp':	
 			url='http://158.132.255.20:12480/data/trtcp'
+		elif type =='quality':
+			url='http://158.132.255.20:12480/data/quality'
 		else:
 			return 'invalid type'
 		with open(filePath,'r') as f:

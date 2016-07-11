@@ -35,7 +35,7 @@ for i in range(0,int(repeat)):
 		cmd=bash_command('phantomjs '+curPath+'/../js/loadtime.js '+rand_link)
 		out, err = cmd.communicate()
 		print getId()+": browse "+str(i+1)
-		with open(log_file,'a') as logfile:
+		with open(log_file,'ab') as logfile:
 			logfile.write(out)
 		resultArr=out.strip().split(',')
 		dataobj['data'].append({'timeStamp':str(resultArr[0]),'link':resultArr[1],'loadtime':resultArr[2]})
