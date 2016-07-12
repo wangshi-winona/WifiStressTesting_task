@@ -2,17 +2,17 @@ import urllib
 import urllib2
 import json
 from getId import getId
-
+dataServer='http://158.132.255.20:12480'
 def http_post(filePath,type):
 	try:
 		if type=='web':
-			url='http://158.132.255.20:12480/data/web'
+			url=dataServer+'/data/web'
 		elif type=='video':
-			url='http://158.132.255.20:12480/data/video'
+			url=dataServer+'/data/video'
 		elif type =='trtcp':	
-			url='http://158.132.255.20:12480/data/trtcp'
+			url=dataServer+'/data/trtcp'
 		elif type =='quality':
-			url='http://158.132.255.20:12480/data/quality'
+			url=dataServer+'/data/quality'
 		else:
 			return 'invalid type'
 		with open(filePath,'r') as f:
