@@ -14,7 +14,6 @@ location=sys.argv[4]
 piid=getId()
 timeStamp=str(int(time.time()))
 curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-print curPath
 log_file=curPath+'/../log/quality/quality_log'
 json_file=curPath+'/../log/quality/'+timeStamp+'.json'
 def bash_command(cmd):
@@ -31,10 +30,11 @@ for i in range(0,int(repeat)):
 	signal=qualityArr[1].split('=')[1]
 	noise=qualityArr[2].split('=')[1]
 	dataobj['data'].append({'timeStamp':ts, 'linkQuality':link, 'signal':signal, 'noise':noise})
-	print json.dumps(dataobj)
+	print getId()+": "+ts+" logging wifi quality"
 	with open(log_file,'ab') as f:
-		f.write(ts+' '+out.strip()+'')
+		f.write(ts+' '+out.strip()+'\n')
 	time.sleep(int(interval))
 with open(json_file,'wb') as f:
 	json.dump(dataobj,f,indent=4)
-
+resp=http_post(json_file,'quality')
+print getId()+': Server: '+resp
