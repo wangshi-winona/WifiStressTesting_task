@@ -20,7 +20,7 @@ curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))
 url="http://"+serverIp+"/video.html?video="+video
 json_file=curPath+"/../log/video/"+str(int(time.time()))+".json"
 log_file=curPath+"/../log/video/video_log"
-with open (log_file,'a') as logfile:
+with open (log_file,'ab') as logfile:
 	logfile.write("server: "+serverIp)
 	logfile.write("video: "+video)
 	logfile.write("jsonfile: "+json_file)
@@ -59,7 +59,7 @@ else:
 		duration = driver.find_element_by_id("duration").get_attribute("innerHTML")
 		print id+": video streaming ended"
 		print id+": startDelay-" + delay + " duration-" + duration
-		with open(log_file,'a') as logfile:
+		with open(log_file,'ab') as logfile:
 			logfile.write("id-"+id+" start delay-" + delay + " duration-" + duration+"\n")
 		dataobj['startDelay']=delay
 		dataobj['duration']=duration
