@@ -1,0 +1,41 @@
+{
+    "repeat": "5", 
+    "eid": "1", 
+    "piid": "2", 
+    "timeStamp": "1468570779", 
+    "interval": "1", 
+    "type": "quality", 
+    "data": [
+        {
+            "linkQuality": "100/100", 
+            "timeStamp": "1468570779", 
+            "signal": "84/100", 
+            "noise": "0/100"
+        }, 
+        {
+            "linkQuality": "100/100", 
+            "timeStamp": "1468570780", 
+            "signal": "83/100", 
+            "noise": "0/100"
+        }, 
+        {
+            "linkQuality": "100/100", 
+            "timeStamp": "1468570781", 
+            "signal": "82/100", 
+            "noise": "0/100"
+        }, 
+        {
+            "linkQuality": "100/100", 
+            "timeStamp": "1468570782", 
+            "signal": "83/100", 
+            "noise": "0/100"
+        }, 
+        {
+            "linkQuality": "100/100", 
+            "timeStamp": "1468570783", 
+            "signal": "84/100", 
+            "noise": "0/100"
+        }
+    ], 
+    "location": "qr503"
+}

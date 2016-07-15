@@ -21,7 +21,7 @@ base=url='http://'+dataServerIp+':'+dataServerPort
 def http_post(filePath,type):
 	try:
 		if type=='web':
-			url=base+'/data/video'
+			url=base+'/data/web'
 		elif type=='video':
 			url=base+'/data/video'
 		elif type =='trtcp':	

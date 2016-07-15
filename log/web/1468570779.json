@@ -1,0 +1,61 @@
+{
+    "repeat": "10", 
+    "eid": "1", 
+    "piid": "2", 
+    "timeStamp": "1468570779", 
+    "interval": "10", 
+    "type": "web", 
+    "data": [
+        {
+            "timeStamp": "1468570780.929", 
+            "link": "http://www.google.com.hk/url?q=https://en.wikipedia.org/wiki/Wi-Fi", 
+            "loadtime": "139"
+        }, 
+        {
+            "timeStamp": "1468570792.224", 
+            "link": "http://www.google.com.hk/url?q=https://www.hongkongairport.com/eng/passenger/arrival/t1/airport-services-facilities/internet-business-facility.html", 
+            "loadtime": "136"
+        }, 
+        {
+            "timeStamp": "1468570804.972", 
+            "link": "http://www.google.com.hk/search?q=wifi", 
+            "loadtime": "1617"
+        }, 
+        {
+            "timeStamp": "1468570816.323", 
+            "link": "http://www.google.com.hk/url?q=http://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/stress-symptoms/art-20050987", 
+            "loadtime": "193"
+        }, 
+        {
+            "timeStamp": "1468570827.753", 
+            "link": "http://www.google.com.hk/url?q=http://www.wi-fi.hk/en", 
+            "loadtime": "299"
+        }, 
+        {
+            "timeStamp": "1468570839.052", 
+            "link": "http://www.google.com.hk/url?q=http://www.wi-fi.hk/en", 
+            "loadtime": "127"
+        }, 
+        {
+            "timeStamp": "1468570851.405", 
+            "link": "http://www.google.com.hk/search?q=stress", 
+            "loadtime": "1191"
+        }, 
+        {
+            "timeStamp": "1468570863.821", 
+            "link": "http://www.google.com.hk/search?q=wifi", 
+            "loadtime": "1191"
+        }, 
+        {
+            "timeStamp": "1468570876.126", 
+            "link": "http://www.google.com.hk/search?q=wifi", 
+            "loadtime": "1109"
+        }, 
+        {
+            "timeStamp": "1468570887.458", 
+            "link": "http://www.google.com.hk/url?q=https://spins.fedoraproject.org/", 
+            "loadtime": "148"
+        }
+    ], 
+    "location": "qr503"
+}
