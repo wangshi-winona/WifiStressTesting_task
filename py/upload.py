@@ -1,21 +1,33 @@
+#! /usr/bin/python
 import urllib
 import urllib2
 import json
+import subprocess
+import os
+import inspect
 from getId import getId
-from getDataServer import getDataServer
+curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+def bash_command(cmd):
+	proc=subprocess.Popen(['/bin/bash','-c',cmd], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	return proc
+cmd=bash_command(curPath+'/../script/getConfValue.sh dataServerIp')
+out, err=cmd.communicate()
+dataServerIp=out.strip()
+cmd=bash_command(curPath+'/../script/getConfValue.sh dataServerPort')
+out, err=cmd.communicate()
+dataServerPort=out.strip()
+base=url='http://'+dataServerIp+':'+dataServerPort
 
-dataServer=getDataServer()
-print dataServer
 def http_post(filePath,type):
 	try:
 		if type=='web':
-			url=dataServer+'/data/web'
+			url=base+'/data/video'
 		elif type=='video':
-			url=dataServer+'/data/video'
+			url=base+'/data/video'
 		elif type =='trtcp':	
-			url=dataServer+'/data/trtcp'
+			url=base+'/data/trtcp'
 		elif type =='quality':
-			url=dataServer+'/data/quality'
+			url=base+'/data/quality'
 		else:
 			return 'invalid type'
 		with open(filePath,'r') as f:
