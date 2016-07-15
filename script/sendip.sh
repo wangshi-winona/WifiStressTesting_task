@@ -1,6 +1,6 @@
 #! /bin/bash
 curPath=$(cd "$(dirname "$0")";pwd)
-source ${curPath}/../connection.conf
+source ${curPath}/../controlUsingWireless.conf
 id=$1
 ip=$2
-sshpass -p 'userpw' ssh user@${serverIp} -p ${serverSshPort} sudo ${serverIpPath}/reg.py $id $ip
+sshpass -p 'user' ssh user@${ipServerIp} -p ${ipServerSshPort} ${ipServerIpPath}/reg.py $id $ip

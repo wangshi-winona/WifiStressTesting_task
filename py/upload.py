@@ -2,7 +2,10 @@ import urllib
 import urllib2
 import json
 from getId import getId
-dataServer='http://158.132.255.20:12480'
+from getDataServer import getDataServer
+
+dataServer=getDataServer()
+print dataServer
 def http_post(filePath,type):
 	try:
 		if type=='web':
