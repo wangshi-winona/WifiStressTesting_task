@@ -4,6 +4,9 @@ import linecache
 from runtrtcp import runtrtcp
 import os
 import inspect
+import time
+import sched
+schedule=sched.scheduler(time.time,time.sleep)
 numOfObj=int(sys.argv[1])
 N=sys.argv[2]
 r=sys.argv[3]
@@ -13,4 +16,5 @@ curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))
 obj_file=curPath+'/testObj.txt'
 lines=linecache.getlines(obj_file)
 for i in range(0,numOfObj):
-	runtrtcp(N,r,lines[i].strip(),eid,location)
+	schedule.enter(i*10,0,runtrtcp,(N,r,lines[i].strip(),eid,location))
+schedule.run()	

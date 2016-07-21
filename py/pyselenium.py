@@ -35,12 +35,12 @@ except:
 	finally:
 		xdisplay.popen.terminate()
 else:
+	count = 0
+	id=getId()
+	dataobj={'piid':id,'eid':eid,'location':location,'type':'video','data':[],'timeStamp':str(int(time.time()))}
+	print getId()+": streaming "+video
+	logfile=open(log_file,'ab')
 	try:
-		count = 0
-		id=getId()
-		dataobj={'piid':id,'eid':eid,'location':location,'type':'video','data':[],'timeStamp':str(int(time.time()))}
-		print getId()+": streaming "+video
-		logfile=open(log_file,'ab')
 		driver.get(url)
 		while (buffer > '1' and count < 1800):
 			bufferString = driver.find_element_by_id("buffer").get_attribute("innerHTML")
@@ -66,11 +66,14 @@ else:
 		#print json.dumps(dataobj)
 		with open(json_file,'wb') as outfile:
 			json.dump(dataobj, outfile,indent=4)
-		resp=http_post(json_file,'video')
-		print getId()+": Server: "+resp
+		try:
+			resp=http_post(json_file,'video')
+			print getId()+": Server: "+resp
+		except:
+			print getId()+": upload exception"
 	except Exception as e:
 		print getId() + ": video error "
-		print str(e)
+		print getId() + ": error msg: " + str(e)
 	finally:
 		driver.close()
 		display.popen.terminate()

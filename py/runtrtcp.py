@@ -15,12 +15,6 @@ def bash_command(cmd):
 def remove_last_line(s):
 	return s[:s.rfind('\n')]
 
-#N=sys.argv[1]
-#r=sys.argv[2]
-#obj=sys.argv[3]
-#eid=sys.argv[4]
-#location=sys.argv[5]
-
 def runtrtcp(N,r,obj,eid,location):
 	log_file=curPath+"/../log/trtcp/trtcp_log"
 	id=getId()
@@ -42,5 +36,8 @@ def runtrtcp(N,r,obj,eid,location):
 		dataobj['data'].append(row)
 	with open(json_file,'wb') as outfile:
 		json.dump(dataobj,outfile,indent=4)
-	resp=http_post(json_file,'trtcp')
-	print getId()+": Server: "+str(resp)
+	try:
+		resp=http_post(json_file,'trtcp')
+		print getId()+": Server: "+resp
+	except:
+		print getId()+": upload exception"

@@ -44,5 +44,8 @@ for i in range(0,int(repeat)):
 		continue
 with open(json_file,'wb') as outfile:
 	json.dump(dataobj,outfile,indent=4) 
-resp=http_post(json_file,'web')
-print getId()+": Server: "+resp
+try:
+	resp=http_post(json_file,'web')
+	print getId()+": Server: "+resp
+except:
+	print getId()+": upload exception"

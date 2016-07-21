@@ -5,6 +5,7 @@ import time
 import json
 import os
 import inspect
+import re
 from upload import http_post
 from getId import getId
 interval=sys.argv[1]
@@ -25,10 +26,14 @@ for i in range(0,int(repeat)):
 	proc=bash_command('iwconfig wlan0 | grep -i quality')
 	out, err = proc.communicate()
 	ts=str(int(time.time()))
-	qualityArr=out.strip().split('  ')
-	link=qualityArr[0].split('=')[1]
-	signal=qualityArr[1].split('=')[1]
-	noise=qualityArr[2].split('=')[1]
+	qualityArr=re.split('\W+',out.strip())
+	link=qualityArr[2]
+	signal=qualityArr[5]
+	noise=qualityArr[8]
+	#qualityArr=out.strip().split('  ')
+	#link=qualityArr[0].split('=')[1]
+	#signal=qualityArr[1].split('=')[1]
+	#noise=qualityArr[2].split('=')[1]
 	dataobj['data'].append({'timeStamp':ts, 'linkQuality':link, 'signal':signal, 'noise':noise})
 	print getId()+": "+ts+" logging wifi quality"
 	with open(log_file,'ab') as f:
@@ -36,5 +41,8 @@ for i in range(0,int(repeat)):
 	time.sleep(int(interval))
 with open(json_file,'wb') as f:
 	json.dump(dataobj,f,indent=4)
-resp=http_post(json_file,'quality')
-print getId()+': Server: '+resp
+try:
+	resp=http_post(json_file,'quality')
+	print getId()+': Server: '+resp
+except:
+	print getId()+': upload exception'
