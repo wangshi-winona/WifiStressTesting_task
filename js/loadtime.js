@@ -1,3 +1,6 @@
+//use phantomjs to load the webpage and get the loadtime
+//timeout is set to 5 seconds
+
 var page=require('webpage').create();
 var system=require('system');
 var fs = require('fs');

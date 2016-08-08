@@ -1,4 +1,6 @@
 # /usr/bin/python
+# video streaming
+# use selenium to open the video playing webpage and get the application qos data
 from selenium import webdriver
 from pyvirtualdisplay import Display
 import time
@@ -14,19 +16,22 @@ display.start()
 
 serverIp= sys.argv[1]
 video=sys.argv[2]
-eid=sys.argv[3]
-location=sys.argv[4]
+timeLimit=int(sys.argv[3])
+eid=sys.argv[4]
+location=sys.argv[5]
 curPath=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 url="http://"+serverIp+"/video.html?video="+video
 json_file=curPath+"/../log/video/"+str(int(time.time()))+".json"
 log_file=curPath+"/../log/video/video_log"
-with open (log_file,'ab') as logfile:
+
+with open (log_file,'ab') as logfile:#log the video data to local
 	logfile.write("server: "+serverIp)
 	logfile.write("video: "+video)
 	logfile.write("jsonfile: "+json_file)
+#output message to console
 print getId() + ": launching driver (ts-"+str(int(time.time()))+")"
 try:
-	driver = webdriver.Firefox()
+	driver = webdriver.Firefox()#launch firefox driver
 	print getId() + ": launched driver (ts-"+str(int(time.time()))+")"
 except:
 	print getId() + ": fail to launch driver"
@@ -42,7 +47,7 @@ else:
 	logfile=open(log_file,'ab')
 	try:
 		driver.get(url)
-		while (buffer > '1' and count < 1800):
+		while (buffer > '1' and count < timeLimit):#looping to get buffer level, etc. until the video ended or timeout
 			bufferString = driver.find_element_by_id("buffer").get_attribute("innerHTML")
 			ts=str(int(time.time()))
 			tempArr=bufferString.split(' ')

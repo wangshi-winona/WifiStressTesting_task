@@ -1,4 +1,6 @@
 #! /usr/bin/python
+# wifi quality
+# grep the wlan0 interface information at intervals
 import subprocess
 import sys
 import time
@@ -22,14 +24,14 @@ def bash_command(cmd):
         return proc
 
 dataobj={'type':'quality', 'piid':piid, 'eid':eid, 'location':location, 'timeStamp':timeStamp, 'interval':interval, 'repeat': repeat, 'data':[]}
-for i in range(0,int(repeat)):
+for i in range(0,int(repeat)):#repeat a certain number of times to grep the wifi info
 	proc=bash_command('iwconfig wlan0 | grep -i quality')
 	out, err = proc.communicate()
 	ts=str(int(time.time()))
 	qualityArr=re.split('\W+',out.strip())
-	link=qualityArr[2]
-	signal=qualityArr[5]
-	noise=qualityArr[8]
+	link=qualityArr[2]+'/'+qualityArr[3]
+	signal=qualityArr[6]+'/'+qualityArr[7]
+	noise=qualityArr[10]+'/'+qualityArr[11]
 	#qualityArr=out.strip().split('  ')
 	#link=qualityArr[0].split('=')[1]
 	#signal=qualityArr[1].split('=')[1]

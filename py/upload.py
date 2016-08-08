@@ -1,4 +1,5 @@
 #! /usr/bin/python
+# function for uploading the data to server
 import urllib
 import urllib2
 import json
@@ -18,7 +19,7 @@ out, err=cmd.communicate()
 dataServerPort=out.strip()
 base=url='http://'+dataServerIp+':'+dataServerPort
 
-def http_post(filePath,type):
+def http_post(filePath,type):#generate the upload url according to the data type
 	try:
 		if type=='web':
 			url=base+'/data/web'

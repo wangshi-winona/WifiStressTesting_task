@@ -1,4 +1,6 @@
 #! /usr/bin/python
+# web browsing
+# read the links from file and call the phantomjs to get the loadtime of the webpage
 import subprocess
 import json
 import csv
@@ -27,11 +29,10 @@ dataobj={'type':'web','piid':getId(),'eid':eid,'location':location,'timeStamp':s
 with open(link_file,'r') as f:
 	link_num= sum(1 for _ in f)
 resultStr=''
-for i in range(0,int(repeat)):
+for i in range(0,int(repeat)):#loop to visit links
 	try:
-		nthLine=randint(1,link_num)
+		nthLine=randint(1,link_num)#randonly get a link from the list
 		rand_link=linecache.getline(link_file,nthLine)
-		#print nthLine
 		cmd=bash_command('phantomjs '+curPath+'/../js/loadtime.js '+rand_link)
 		out, err = cmd.communicate()
 		print getId()+": browse "+str(i+1)

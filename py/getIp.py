@@ -1,4 +1,5 @@
 #! /usr/bin/python
+# function to get the Ip address of a certain interface
 import fcntl
 import struct
 import socket

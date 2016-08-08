@@ -1,4 +1,6 @@
 #! /usr/bin/python
+# register self id and ip to the IP server (using SSH)
+# only called when using wireless control
 import subprocess
 import time
 import os

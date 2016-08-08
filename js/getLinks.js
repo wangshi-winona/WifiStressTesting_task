@@ -1,4 +1,5 @@
-//console.log("got there");
+//use phantomjs to grep the links from google search
+// only used for prepare the website links
 var page = require('webpage').create();
 var system = require('system');
 var fs = require('fs');

@@ -1,4 +1,6 @@
 #! /usr/bin/python
+# listen to port 7070 to receive udp broadcast sent by control station and response with self id and ip
+# only used in ethernet control
 import socket
 import sys
 import fcntl

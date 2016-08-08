@@ -16,6 +16,7 @@ def add_links(keyword):
 	print getId()+": Google Search '"+keyword+"'"
 	with open(link_file,'a') as f:
 		f.write(out.strip())
+		f.write('\n')
 	print "Added links for '"+keyword+"'"
 	print out.strip()
 	print err

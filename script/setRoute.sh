@@ -1,8 +1,8 @@
 #! /bin/bash
+# set the routing table before testing
+# only used in ethernet control
 curPath=$(cd "$(dirname "$0")";pwd)
 source ${curPath}/../connection.conf
-#echo $curPath
-#echo $router
 /usr/sbin/ifmetric wlan0 0
 /usr/sbin/ifmetric eth0 100
 /sbin/route del $dataServerIp gw $router

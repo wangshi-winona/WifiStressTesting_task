@@ -1,3 +1,5 @@
+#! /usr/bin/python
+# python function to run trtcp
 import subprocess
 import sys
 import csv

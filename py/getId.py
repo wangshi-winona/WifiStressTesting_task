@@ -1,4 +1,5 @@
 #! /usr/bin/python
+# function to get self id
 import fcntl
 import struct
 import os

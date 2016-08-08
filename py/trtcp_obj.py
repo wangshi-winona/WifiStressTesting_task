@@ -1,4 +1,6 @@
 #! /usr/bin/python
+# trtcp
+# read the object/target from the list and call runtrtcp.py
 import sys
 import linecache
 from runtrtcp import runtrtcp
